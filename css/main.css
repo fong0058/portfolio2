@@ -63,6 +63,8 @@ h2 span {
 .banner img {
     position: relative;
     left: 0;
+    max-height: 80vh;
+
 }
 
 .banner .text {
@@ -71,7 +73,6 @@ h2 span {
     width: 80%;
     top: 50%;
     left: 0;
-    right: 30%;
     margin: auto;
     transform: translateY(-50%);
 }
@@ -115,15 +116,15 @@ h4 span::after {
     padding: 13px 27px 9px 27px;
 }
 
-.btn-primary:hover {
-    background-color: var(--decor-color-orange);
+.btn-primarys:active {
+    background-color: var(--decor-color-orange) !important;
 }
 
 .btn-primary:focus {
     background-color: var(--decor-color-orange);
 }
 
-.btn-primary:active {
+.btn-primary:hover {
     background-color: var(--decor-color-orange);
 }
 
@@ -139,12 +140,20 @@ h4 span::after {
     text-decoration: underline var(--btn-color) !important;
 }
 
-img {
-    
-}
-
 footer {
     background-color: #282828;
+}
+
+/* --------------------------contact-------------------------- */
+
+.form-input {
+    width: 100%;
+    border: #282828 solid 2px;
+}
+
+.contact form textarea {
+    height: 10em;
+    resize: none;
 }
 
 @media only screen and (min-width: 576px) {
@@ -152,21 +161,32 @@ footer {
         left: 10%;
     }
 
+    .banner .text {
+        left: 5%;
+    }
+
     .recent img {
         width: 100%;
     }
 }
 
+/* --------------------------about-------------------------- */
+
+.about button {
+    width: 132px;
+}
+
+.about a {
+    width: 132px;
+}
+
+.about .text {
+    top: 12% !important;
+    left: 5% !important;
+}
+
 @media only screen and (min-width: 768px) {
 
-    .banner img {
-        left: 33%;
-    }
-
-    .banner .img {
-        left: 10%;
-        width: 75%;
-    }
     /* alternative for the gap */
     .row {
         gap: 4%;
@@ -174,5 +194,9 @@ footer {
 
     .col-md-6 {
         width: 48%;
+    }
+
+    .about a {
+        margin-left: 2em !important;
     }
 }
